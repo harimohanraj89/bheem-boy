@@ -98,7 +98,7 @@ export default {
 				'wiggle': 'wiggle 2s ease-in-out infinite'
 			},
 			fontFamily: {
-				display: ['Fredoka', 'sans-serif'],
+				display: ['Roboto', 'sans-serif'],
 				body: ['Inter', 'sans-serif'],
 			},
 			backgroundImage: {

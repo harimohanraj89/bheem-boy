@@ -8,11 +8,21 @@ interface FeatureCardProps {
   description: string;
   icon: React.ReactNode;
   className?: string;
+  imgSrc?: string;
 }
 
-const FeatureCard = ({ title, description, icon, className }: FeatureCardProps) => {
+const FeatureCard = ({ title, description, icon, className, imgSrc }: FeatureCardProps) => {
   return (
     <div className={cn("bg-cardBg rounded-xl p-6 shadow-sm border border-primary/10", className)}>
+      {imgSrc && (
+        <div className="mb-4 rounded-lg overflow-hidden h-40">
+          <img 
+            src={imgSrc} 
+            alt={title} 
+            className="w-full h-full object-cover"
+          />
+        </div>
+      )}
       <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-4 text-primary">
         {icon}
       </div>
@@ -36,12 +46,14 @@ const Features = () => {
             title="Rock-a-Bye Adult" 
             description="Be gently rocked to sleep in our oversized rocking chairs by a trained Bheem Boy."
             icon={<BedIcon size={24} />}
+            imgSrc="https://images.unsplash.com/photo-1582562124811-c09040d0a901"
           />
           <FeatureCard 
             title="Up We Go!" 
             description="Too tired to walk? Our Bheem Boys will carry you anywhere you need to go."
             icon={<RocketIcon size={24} />}
             className="sm:translate-y-8"
+            imgSrc="https://images.unsplash.com/photo-1517022812141-23620dba5c23"
           />
           <FeatureCard 
             title="Safe & Sound" 
