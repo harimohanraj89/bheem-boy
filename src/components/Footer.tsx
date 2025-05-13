@@ -11,9 +11,9 @@ const Footer = () => {
             <Link to="/" className="flex items-center">
               <span className="font-display text-2xl font-bold">Bheem Boy</span>
             </Link>
-            <p className="text-white/60 text-sm mt-2">Child-like comforts for adults</p>
+            <p className="text-white/60 text-sm mt-2">You deserve to be pampered</p>
           </div>
-          
+
           <div className="text-center md:text-right">
             <p className="text-white/60 text-sm">© {new Date().getFullYear()} Bheem Boy</p>
             <p className="text-white/60 text-sm mt-1">A satirical service at bheemboy.in</p>
